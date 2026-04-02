@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MIÉRCOLES 1 DE ABRIL DE 2026</title>
+
+  <!-- Fuentes elegantes y románticas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1:#07010d;
+      --bg2:#12001d;
+      --paper:#ffffff;
+      --ink:#2b2030;
+      --soft:#6b5a70;
+
+      --purple:#a855f7;
+      --purple2:#7c3aed;
+      --pink:#ff4fd8;
+
+      --gold:#d4af37;
+      --shadow: rgba(0,0,0,0.35);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      min-height:100vh;
+      font-family:"Poppins", sans-serif;
+      background: radial-gradient(circle at top, #1b002c 0%, var(--bg2) 35%, var(--bg1) 100%);
+      color: var(--ink);
+      overflow-x:hidden;
+      padding: 30px 14px;
+    }
+
+    /* Estrellitas */
+    .stars{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
+      opacity:0.25;
+      background-image:
+        radial-gradient(2px 2px at 20% 30%, #fff 60%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 80% 20%, #fff 60%, transparent 100%),
+        radial-gradient(1.8px 1.8px at 50% 70%, #fff 60%, transparent 100%),
+        radial-gradient(1.2px 1.2px at 10% 90%, #fff 60%, transparent 100%),
+        radial-gradient(1.6px 1.6px at 90% 85%, #fff 60%, transparent 100%);
+      animation: twinkle 4s infinite alternate ease-in-out;
+      z-index:0;
+    }
+
+    @keyframes twinkle{
+      from{ opacity:0.15; }
+      to{ opacity:0.35; }
+    }
+
+    .container{
+      max-width: 980px;
+      margin: 0 auto;
+      position:relative;
+      z-index:1;
+    }
+
+    /* Marco general elegante */
+    .frame{
+      position:relative;
+      padding: 22px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgba(168,85,247,0.30), rgba(255,79,216,0.15), rgba(124,58,237,0.25));
+      box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+      overflow:hidden;
+    }
+
+    .frame::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top left, rgba(255,79,216,0.25), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(168,85,247,0.25), transparent 60%);
+      filter: blur(10px);
+      opacity:0.9;
+      z-index:0;
+    }
+
+    /* Carta tipo papel */
+    .letter{
+      position:relative;
+      z-index:2;
+      background: linear-gradient(180deg, #ffffff 0%, #fff8ff 100%);
+      border-radius: 22px;
+      padding: 40px 34px;
+      border: 1px solid rgba(124,58,237,0.20);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+      overflow:hidden;
+    }
+
+    /* Brillitos suaves dentro */
+    .letter::after{
+      content:"";
+      position:absolute;
+      inset:-20px;
+      background-image:
+        radial-gradient(3px 3px at 12% 18%, rgba(168,85,247,0.35) 50%, transparent 60%),
+        radial-gradient(2px 2px at 70% 25%, rgba(255,79,216,0.25) 50%, transparent 60%),
+        radial-gradient(2.5px 2.5px at 40% 80%, rgba(124,58,237,0.25) 50%, transparent 60%),
+        radial-gradient(2px 2px at 85% 70%, rgba(168,85,247,0.20) 50%, transparent 60%);
+      opacity:0.6;
+      filter: blur(0.2px);
+      z-index:0;
+      pointer-events:none;
+    }
+
+    /* Encabezado */
+    .header{
+      position:relative;
+      z-index:2;
+      text-align:center;
+      margin-bottom: 18px;
+    }
+
+    .title{
+      font-family:"Great Vibes", cursive;
+      font-size: 52px;
+      color: var(--purple2);
+      text-shadow: 0 0 14px rgba(168,85,247,0.25);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .date{
+      font-family:"Playfair Display", serif;
+      font-size: 16px;
+      color: var(--soft);
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      margin-bottom: 18px;
+    }
+
+    .divider{
+      width: 85%;
+      max-width: 520px;
+      margin: 0 auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(124,58,237,0.65), rgba(255,79,216,0.50), transparent);
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+
+    /* Cuerpo */
+    .content{
+      position:relative;
+      z-index:2;
+      font-size: 16.6px;
+      line-height: 1.95;
+      color: var(--ink);
+    }
+
+    .content p{
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    .content strong{
+      color: #3b0a58;
+      font-weight: 800;
+    }
+
+    .saludo{
+      font-family:"Playfair Display", serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #2b0c3b;
+    }
+
+    .firma{
+      margin-top: 26px;
+      text-align:left;
+      font-family:"Playfair Display", serif;
+      font-size: 16.5px;
+      color: var(--ink);
+    }
+
+    .firma .nombre{
+      margin-top: 8px;
+      font-weight: 800;
+      color: #2b0c3b;
+      letter-spacing: 0.5px;
+      font-size: 16.8px;
+    }
+
+    .firma .corazon{
+      font-size: 18px;
+    }
+
+    /* Frase final neon morado */
+    .neon-box{
+      margin-top: 40px;
+      padding: 22px 18px;
+      border-radius: 20px;
+      background: rgba(15, 0, 25, 0.85);
+      border: 1px solid rgba(168,85,247,0.55);
+      box-shadow:
+        0 0 18px rgba(168,85,247,0.40),
+        0 0 45px rgba(124,58,237,0.35),
+        inset 0 0 22px rgba(255,79,216,0.10);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .neon-box::before{
+      content:"";
+      position:absolute;
+      inset:-40px;
+      background: radial-gradient(circle at 30% 30%, rgba(168,85,247,0.35), transparent 55%),
+                  radial-gradient(circle at 70% 70%, rgba(255,79,216,0.20), transparent 55%);
+      filter: blur(10px);
+      opacity:0.8;
+    }
+
+    .neon-phrase{
+      position:relative;
+      z-index:2;
+      font-family:"Playfair Display", serif;
+      font-size: 17px;
+      line-height: 1.9;
+      text-align:center;
+      color: #f3e8ff;
+      text-shadow:
+        0 0 10px rgba(168,85,247,0.75),
+        0 0 18px rgba(124,58,237,0.65),
+        0 0 35px rgba(255,79,216,0.35);
+    }
+
+    .neon-phrase span{
+      display:block;
+      margin-top: 10px;
+      font-family:"Great Vibes", cursive;
+      font-size: 42px;
+      color: #d8b4fe;
+      text-shadow:
+        0 0 12px rgba(168,85,247,0.9),
+        0 0 30px rgba(124,58,237,0.8),
+        0 0 55px rgba(255,79,216,0.4);
+      letter-spacing: 1px;
+    }
+
+    /* Decoraciones esquina */
+    .corner{
+      position:absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      filter: blur(0.5px);
+      opacity:0.25;
+      z-index:1;
+    }
+
+    .c1{
+      top:-40px;
+      left:-40px;
+      background: radial-gradient(circle, rgba(168,85,247,0.9), transparent 65%);
+    }
+
+    .c2{
+      bottom:-40px;
+      right:-40px;
+      background: radial-gradient(circle, rgba(255,79,216,0.7), transparent 65%);
+    }
+
+    /* Responsive */
+    @media(max-width: 600px){
+      .letter{
+        padding: 32px 20px;
+      }
+      .title{
+        font-size: 44px;
+      }
+      .content{
+        font-size: 15.8px;
+      }
+      .neon-phrase span{
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stars"></div>
+
+  <div class="container">
+    <div class="frame">
+      <div class="corner c1"></div>
+      <div class="corner c2"></div>
+
+      <div class="letter">
+        <div class="header">
+          <div class="title">Carta de Amor para ti mi niña linda</div>
+          <div class="date">Miércoles, 1 de abril de 2026 — Noche</div>
+          <div class="divider"></div>
+        </div>
+
+        <div class="content">
+          <div class="saludo">Mi amor,</div>
+
+          <p>
+            Esta noche… esta noche me senté un momento en silencio, y el mundo se me quedó quieto.
+            No porque afuera no existiera ruido, sino porque dentro de mí solo existías tú.
+            Y es extraño… porque aunque no estés aquí físicamente, aunque no pueda sentir tu piel
+            pegada a la mía en este instante, tu presencia me llena tanto que parece que el aire
+            se vuelve más denso, más tibio, más real.
+          </p>
+
+          <p>
+            Te juro que a veces no entiendo cómo una persona puede convertirse en hogar.
+            Cómo una mirada puede ser refugio. Cómo un nombre… tu nombre… puede ser la calma y al mismo tiempo
+            el incendio más hermoso.
+          </p>
+
+          <p>
+            Y hoy, esta noche de miércoles, 1 de abril… no quiero callarme nada.
+            No quiero guardarme nada. No quiero seguir fingiendo que lo que siento por ti es algo
+            “normal” o “bonito” solamente. No. Lo que siento por ti es demasiado.
+            Es grande. Es intenso. Es profundo. Es de esos amores que no se explican con palabras simples…
+            porque tú no eres simple. Porque lo nuestro no es simple.
+          </p>
+
+          <p>
+            Mi amor… tú eres lo que mi alma siempre quiso sin saber cómo pedirlo.
+          </p>
+
+          <p>
+            A veces pienso en ti y me dan ganas de detener el tiempo. De quedarme en un solo instante,
+            en uno de esos momentos en los que me miras con esos ojos tuyos que parecen decirme todo sin hablar…
+            y me siento tan afortunado que me asusta. Me asusta porque siento que no merezco tanta belleza junta
+            en una sola persona. Porque tú eres hermosa, sí… pero no solo de cuerpo. No solo de cara.
+            No solo de sonrisa.
+          </p>
+
+          <p>
+            Tú eres hermosa por dentro, y eso… eso es lo que me mata lentamente.
+          </p>
+
+          <p>
+            Porque tú tienes algo que no se compra, algo que no se enseña, algo que no se finge:
+            tienes luz. Tienes una forma de existir que cambia el ambiente, que cambia los días, que cambia mi vida.
+          </p>
+
+          <p>
+            Desde que llegaste, mi mundo ya no se siente vacío. Desde que te tengo, mis pensamientos tienen sentido.
+            Desde que eres mía… yo no vuelvo a ser el mismo.
+          </p>
+
+          <p>
+            Y no sé si tú lo sabes, pero yo te pienso demasiado.
+          </p>
+
+          <p>
+            Te pienso cuando estoy tranquilo… y te pienso cuando estoy cansado.
+            Te pienso cuando todo va bien… y te pienso cuando el mundo se pone pesado.
+            Te pienso cuando escucho música… cuando miro el cielo… cuando la noche se vuelve lenta.
+            Te pienso incluso cuando intento distraerme, porque tú te metiste en mi mente como una necesidad bonita,
+            como una obsesión dulce… como un destino.
+          </p>
+
+          <p>
+            Y es que tú eres mi debilidad, amor.
+          </p>
+
+          <p>
+            Eres esa parte de mí que no se defiende. Esa parte que se rinde.
+            Esa parte que se derrite con solo imaginar tu boca, tu risa, tu voz pronunciando mi nombre.
+          </p>
+
+          <p>
+            Y cuando te tengo cerca… Dios mío… cuando te tengo cerca, siento que el corazón se me acelera
+            como si estuviera viviendo algo prohibido. Algo demasiado perfecto. Algo que no debería existir…
+            pero existe. Porque existes tú.
+          </p>
+
+          <p>
+            Mi amor, yo deseo tu presencia de una manera que no es solo física… es espiritual, es emocional, es total.
+          </p>
+
+          <p>
+            Yo te deseo con el alma.
+          </p>
+
+          <p>
+            Quiero tus manos en mi cara. Quiero tu cuerpo pegado al mío sin espacio.
+            Quiero tus labios buscándome como si tuvieran hambre de mí. Quiero tu mirada encima de la mía,
+            como si el mundo no importara. Quiero besarte lento… pero también quiero besarte con desesperación.
+            Quiero perder el control contigo, quiero sentir que me perteneces en ese momento,
+            quiero que sientas que yo soy tuyo también… sin dudas, sin miedo, sin reservas.
+          </p>
+
+          <p>
+            Porque cuando se trata de ti, yo no sé amar a medias.
+          </p>
+
+          <p>
+            Yo contigo lo quiero todo.
+          </p>
+
+          <p>
+            Quiero tus días buenos. Quiero tus días malos. Quiero tus silencios. Quiero tus cambios de humor.
+            Quiero tus lágrimas cuando te duela el mundo. Quiero tus sonrisas cuando te sientas invencible.
+            Quiero abrazarte cuando estés débil. Quiero celebrarte cuando estés fuerte.
+          </p>
+
+          <p>
+            Quiero ser ese hombre que tú sientas como apoyo, como paz, como refugio.
+            Quiero ser ese hombre que tú mires y digas: “Aquí estoy segura”.
+            Quiero ser ese amor que no te falle. Ese amor que se quede.
+            Ese amor que te proteja. Ese amor que te cuide el corazón como si fuera lo más sagrado del universo.
+          </p>
+
+          <p>
+            Porque para mí… lo es.
+          </p>
+
+          <p>
+            Tu corazón para mí es algo que se respeta, se honra y se ama.
+          </p>
+
+          <p>
+            Y si yo pudiera, mi amor… si yo pudiera hacer magia, te juro que te arrancaría cualquier tristeza
+            que se te quede pegada. Te quitaría cualquier cansancio que te robe energía.
+            Te callaría cualquier pensamiento que te haga dudar de ti.
+          </p>
+
+          <p>
+            Porque tú vales demasiado.
+          </p>
+
+          <p>
+            Tú eres una mujer increíble. Y aunque a veces el mundo no lo diga suficiente,
+            aunque a veces la vida no lo demuestre como debería… yo quiero que tú lo sientas conmigo.
+          </p>
+
+          <p>
+            Quiero que tú sientas que yo te miro como se mira algo único.
+            Como se mira algo que no se repite. Como se mira un milagro.
+          </p>
+
+          <p>
+            Y es que tú… tú eres mi milagro favorito.
+          </p>
+
+          <p>
+            Mi amor, yo sé que no soy perfecto. Sé que tengo errores, que tengo días en los que me cuesta expresarme,
+            días en los que la vida me pesa, días en los que no sé cómo demostrar todo lo que siento…
+            pero una cosa sí te la prometo con el alma completa:
+          </p>
+
+          <p>
+            <strong>yo a ti te amo con verdad.</strong>
+          </p>
+
+          <p>
+            Y mi amor no es un juego. Mi amor no es un rato. Mi amor no es por emoción del momento.
+          </p>
+
+          <p>
+            Mi amor por ti es serio. Es real. Es profundo.
+            Es de esos que se quedan incluso cuando todo se pone difícil.
+            De esos que luchan. De esos que construyen. De esos que no se van.
+          </p>
+
+          <p>
+            Porque tú, mi amor… tú eres mi lugar favorito en este mundo.
+          </p>
+
+          <p>
+            Y cuando imagino el futuro… no imagino dinero primero, ni carros, ni viajes, ni cosas materiales.
+            Yo imagino algo más simple y más grande a la vez:
+          </p>
+
+          <p>
+            <strong>Te imagino a ti.</strong>
+          </p>
+
+          <p>
+            Te imagino en mi cama, con el cabello desordenado, con esa carita que me derrite,
+            con tu voz suave diciéndome cualquier cosa. Te imagino cocinando, riéndote, viviendo.
+            Te imagino caminando conmigo, agarrada de mi brazo. Te imagino dormida encima de mí.
+            Te imagino en mi vida como si siempre hubieras sido parte de mí.
+          </p>
+
+          <p>
+            <strong>Te imagino como mi mujer.</strong>
+          </p>
+
+          <p>
+            Y sí… me da miedo decirlo a veces, porque siento que es demasiado fuerte, demasiado intenso…
+            pero si yo me muero mañana, quiero irme con la tranquilidad de que tú lo supiste:
+          </p>
+
+          <p>
+            <strong>yo contigo lo quise todo.</strong>
+          </p>
+
+          <p>
+            Yo contigo quise una historia completa. Una historia que no se quede en recuerdos.
+            Una historia que se convierta en hogar.
+          </p>
+
+          <p>
+            Y esta noche, mi amor, quiero confesarte algo más…
+          </p>
+
+          <p>
+            Cuando estoy lejos de ti, me haces falta como el aire.
+            Me haces falta como si el cuerpo supiera que le falta algo esencial.
+            Me haces falta en lo más mínimo: en un abrazo, en una conversación, en una caricia, en una mirada.
+          </p>
+
+          <p>
+            Me haces falta incluso cuando no lo digo.
+          </p>
+
+          <p>
+            Y cuando te veo… cuando te veo, siento que todo se acomoda.
+          </p>
+
+          <p>
+            Como si mi vida dijera: “Ahí está lo que siempre estabas buscando.”
+          </p>
+
+          <p>
+            Y me dan ganas de cuidarte más. De amarte más. De besarte más. De hacerte sentir más.
+          </p>
+
+          <p>
+            Porque tú mereces un amor que te deje temblando por dentro.
+            Un amor que no sea rutina.
+            Un amor que te haga sentir deseada, admirada, respetada… y sobre todo, elegida.
+          </p>
+
+          <p>
+            Y yo te elijo, mi amor.
+          </p>
+
+          <p>
+            Te elijo incluso en tus días difíciles. Te elijo incluso cuando no te sientas bonita.
+            Te elijo incluso cuando no tengas ganas de hablar. Te elijo incluso cuando estés cansada del mundo.
+          </p>
+
+          <p>
+            Te elijo porque tú eres tú.
+          </p>
+
+          <p>
+            Y tú eres lo mejor que me ha pasado.
+          </p>
+
+          <p>
+            Esta noche, amor… yo quisiera estar ahí contigo.
+            Quisiera tomarte de la cintura y acercarte a mí.
+            Quisiera besarte despacio, mirarte a los ojos,
+            y decirte bajito al oído que me vuelves loco.
+            Que me encanta tu forma de ser. Que me encanta tu cuerpo.
+            Que me encanta tu voz. Que me encanta cómo existes.
+          </p>
+
+          <p>
+            Y después quisiera abrazarte fuerte… fuerte como si mi vida dependiera de eso.
+            Como si el mundo se fuera a acabar y lo único importante fuera quedarme contigo.
+          </p>
+
+          <p>
+            Porque a veces siento eso, mi amor… que si algún día todo se cae,
+            si algún día todo se rompe, si algún día todo se vuelve oscuro…
+          </p>
+
+          <p>
+            <strong>si tú estás conmigo, yo estoy bien.</strong>
+          </p>
+
+          <p>
+            Porque tú eres mi paz. Pero también eres mi deseo. Mi tentación. Mi debilidad.
+            Mi orgullo. Mi mujer hermosa. Mi amor.
+          </p>
+
+          <p>
+            Y sí… yo sé que las palabras no pueden tocarte como mis manos quisieran.
+            Pero quiero que esta carta sea como un abrazo largo, de esos que no se sueltan.
+            Como un beso lento, de esos que dejan la mente vacía y el corazón lleno.
+            Como una promesa susurrada en la oscuridad.
+          </p>
+
+          <p>
+            Mi amor…
+          </p>
+
+          <p>
+            Esta noche, desde donde estoy, con el corazón caliente y el alma llena de ti,
+            te digo algo que me nace desde lo más profundo:
+          </p>
+
+          <p>
+            <strong>Te amo.</strong>
+          </p>
+
+          <p>
+            Te amo con ganas. Te amo con locura. Te amo con calma.
+            Te amo con intensidad. Te amo como si fueras lo único que vale la pena en este mundo.
+          </p>
+
+          <p>
+            Y si mañana la vida cambia, si el tiempo pasa, si todo se transforma…
+            quiero que esto no cambie nunca:
+          </p>
+
+          <p>
+            <strong>mi forma de amarte.</strong>
+          </p>
+
+          <p>
+            Porque yo no te amo por costumbre. Yo te amo porque tú me haces sentir vivo.
+          </p>
+
+          <p>
+            Buenas noches, mi amor.
+          </p>
+
+          <p>
+            Duerme tranquila, preciosa… y si en algún momento cierras los ojos y sientes algo bonito en el pecho,
+            quiero que sepas que soy yo, pensándote, deseándote, cuidándote desde lejos… como siempre.
+          </p>
+
+          <div class="firma">
+            <div>Con todo lo que soy,</div>
+            <div><strong>tu novio que te ama más de lo que sabe explicar.</strong> <span class="corazon">❤️</span></div>
+            <div class="nombre">JUAN KALETH MENDOZA PRIMERA 💜</div>
+          </div>
+
+          <!-- FRASE FINAL NEON -->
+          <div class="neon-box">
+            <div class="neon-phrase">
+              Y si algún día el mundo se pone frío, si el tiempo intenta apagarnos o la vida quiere ponernos pruebas,
+              quiero que recuerdes esto: mi amor por ti no se desgasta, no se rompe, no se cansa…
+              porque yo no te amo por momentos, yo te amo por destino, por elección y por alma,
+              y mientras mi corazón siga latiendo, siempre vas a ser mi razón más bonita, mi paz más profunda
+              y mi sueño más real…
+              <span>VALERIA PETRO VILLAZÓN</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+  </html>
