@@ -5,25 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MIÉRCOLES 1 DE ABRIL DE 2026</title>
 
-  <!-- Fuentes elegantes y románticas -->
+  <!-- Tipografías bonitas y legibles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg1:#07010d;
-      --bg2:#12001d;
-      --paper:#ffffff;
-      --ink:#2b2030;
-      --soft:#6b5a70;
+      --bg1:#04000a;
+      --bg2:#0b0014;
+      --bg3:#1a0030;
+
+      --text:#f4e9ff;
+      --soft:#d7c3ff;
+      --muted:#bba7db;
 
       --purple:#a855f7;
       --purple2:#7c3aed;
       --pink:#ff4fd8;
 
-      --gold:#d4af37;
-      --shadow: rgba(0,0,0,0.35);
+      --shadow: rgba(0,0,0,0.55);
+      --glass: rgba(255,255,255,0.05);
+      --glass2: rgba(255,255,255,0.08);
     }
 
     *{
@@ -35,136 +38,143 @@
     body{
       min-height:100vh;
       font-family:"Poppins", sans-serif;
-      background: radial-gradient(circle at top, #1b002c 0%, var(--bg2) 35%, var(--bg1) 100%);
-      color: var(--ink);
+      background:
+        radial-gradient(circle at 20% 15%, rgba(168,85,247,0.25), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(255,79,216,0.18), transparent 60%),
+        radial-gradient(circle at 50% 50%, rgba(124,58,237,0.20), transparent 70%),
+        linear-gradient(180deg, var(--bg3) 0%, var(--bg2) 45%, var(--bg1) 100%);
       overflow-x:hidden;
-      padding: 30px 14px;
+      padding: 35px 14px;
+      color: var(--text);
     }
 
-    /* Estrellitas */
-    .stars{
+    /* Partículas */
+    .particles{
       position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
+      inset:0;
       pointer-events:none;
-      opacity:0.25;
+      opacity:0.35;
       background-image:
-        radial-gradient(2px 2px at 20% 30%, #fff 60%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 80% 20%, #fff 60%, transparent 100%),
-        radial-gradient(1.8px 1.8px at 50% 70%, #fff 60%, transparent 100%),
-        radial-gradient(1.2px 1.2px at 10% 90%, #fff 60%, transparent 100%),
-        radial-gradient(1.6px 1.6px at 90% 85%, #fff 60%, transparent 100%);
-      animation: twinkle 4s infinite alternate ease-in-out;
-      z-index:0;
+        radial-gradient(2px 2px at 10% 20%, #fff 60%, transparent 100%),
+        radial-gradient(2px 2px at 40% 70%, #fff 60%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 80% 35%, #fff 60%, transparent 100%),
+        radial-gradient(1.8px 1.8px at 75% 90%, #fff 60%, transparent 100%),
+        radial-gradient(1.3px 1.3px at 20% 85%, #fff 60%, transparent 100%);
+      animation: sparkle 4s infinite alternate ease-in-out;
     }
 
-    @keyframes twinkle{
-      from{ opacity:0.15; }
-      to{ opacity:0.35; }
+    @keyframes sparkle{
+      from{ opacity:0.18; transform: scale(1); }
+      to{ opacity:0.42; transform: scale(1.02); }
     }
 
     .container{
-      max-width: 980px;
+      max-width: 1000px;
       margin: 0 auto;
       position:relative;
-      z-index:1;
+      z-index:2;
     }
 
-    /* Marco general elegante */
-    .frame{
+    /* Marco elegante */
+    .outer-frame{
+      border-radius: 30px;
+      padding: 18px;
+      background: linear-gradient(135deg,
+        rgba(168,85,247,0.35),
+        rgba(255,79,216,0.12),
+        rgba(124,58,237,0.28)
+      );
+      box-shadow: 0 30px 90px rgba(0,0,0,0.75);
       position:relative;
-      padding: 22px;
-      border-radius: 26px;
-      background: linear-gradient(135deg, rgba(168,85,247,0.30), rgba(255,79,216,0.15), rgba(124,58,237,0.25));
-      box-shadow: 0 30px 80px rgba(0,0,0,0.55);
       overflow:hidden;
     }
 
-    .frame::before{
+    .outer-frame::before{
       content:"";
       position:absolute;
-      inset:0;
+      inset:-50px;
       background:
-        radial-gradient(circle at top left, rgba(255,79,216,0.25), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(168,85,247,0.25), transparent 60%);
-      filter: blur(10px);
+        radial-gradient(circle at 20% 20%, rgba(255,79,216,0.25), transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(168,85,247,0.30), transparent 60%);
+      filter: blur(18px);
       opacity:0.9;
-      z-index:0;
     }
 
-    /* Carta tipo papel */
+    /* Carta oscura tipo pergamino nocturno */
     .letter{
       position:relative;
       z-index:2;
-      background: linear-gradient(180deg, #ffffff 0%, #fff8ff 100%);
-      border-radius: 22px;
-      padding: 40px 34px;
-      border: 1px solid rgba(124,58,237,0.20);
-      box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+      border-radius: 26px;
+      padding: 46px 42px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 100%);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(10px);
+      box-shadow: inset 0 0 30px rgba(168,85,247,0.12);
       overflow:hidden;
     }
 
-    /* Brillitos suaves dentro */
+    /* Textura */
     .letter::after{
       content:"";
       position:absolute;
-      inset:-20px;
+      inset:0;
       background-image:
-        radial-gradient(3px 3px at 12% 18%, rgba(168,85,247,0.35) 50%, transparent 60%),
-        radial-gradient(2px 2px at 70% 25%, rgba(255,79,216,0.25) 50%, transparent 60%),
-        radial-gradient(2.5px 2.5px at 40% 80%, rgba(124,58,237,0.25) 50%, transparent 60%),
-        radial-gradient(2px 2px at 85% 70%, rgba(168,85,247,0.20) 50%, transparent 60%);
-      opacity:0.6;
-      filter: blur(0.2px);
-      z-index:0;
+        radial-gradient(circle at 25% 20%, rgba(255,255,255,0.06), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(168,85,247,0.08), transparent 65%);
+      opacity:0.8;
       pointer-events:none;
     }
 
     /* Encabezado */
     .header{
       position:relative;
-      z-index:2;
+      z-index:3;
       text-align:center;
-      margin-bottom: 18px;
+      margin-bottom: 30px;
     }
 
-    .title{
-      font-family:"Great Vibes", cursive;
-      font-size: 52px;
-      color: var(--purple2);
-      text-shadow: 0 0 14px rgba(168,85,247,0.25);
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-
-    .date{
+    .header h1{
       font-family:"Playfair Display", serif;
-      font-size: 16px;
-      color: var(--soft);
-      font-weight: 600;
-      letter-spacing: 0.6px;
-      margin-bottom: 18px;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #f8ecff;
+      text-shadow: 0 0 14px rgba(168,85,247,0.35);
+    }
+
+    .header .date{
+      margin-top: 10px;
+      font-family:"Poppins", sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: var(--muted);
+      text-transform: uppercase;
     }
 
     .divider{
-      width: 85%;
-      max-width: 520px;
-      margin: 0 auto;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(124,58,237,0.65), rgba(255,79,216,0.50), transparent);
+      width: 80%;
+      max-width: 540px;
+      height: 2px;
+      margin: 22px auto 0;
       border-radius: 999px;
-      margin-bottom: 28px;
+      background: linear-gradient(90deg,
+        transparent,
+        rgba(168,85,247,0.75),
+        rgba(255,79,216,0.50),
+        rgba(124,58,237,0.70),
+        transparent
+      );
+      box-shadow: 0 0 20px rgba(168,85,247,0.35);
     }
 
-    /* Cuerpo */
+    /* Contenido */
     .content{
       position:relative;
-      z-index:2;
-      font-size: 16.6px;
-      line-height: 1.95;
-      color: var(--ink);
+      z-index:3;
+      font-size: 16.5px;
+      line-height: 2.05;
+      color: var(--text);
     }
 
     .content p{
@@ -173,49 +183,48 @@
     }
 
     .content strong{
-      color: #3b0a58;
+      color: #ffd6ff;
       font-weight: 800;
+      text-shadow: 0 0 10px rgba(255,79,216,0.18);
     }
 
     .saludo{
       font-family:"Playfair Display", serif;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
-      margin-bottom: 20px;
-      color: #2b0c3b;
+      margin-bottom: 22px;
+      color: #ffe6ff;
+      text-shadow: 0 0 14px rgba(168,85,247,0.25);
     }
 
+    /* Firma */
     .firma{
-      margin-top: 26px;
-      text-align:left;
-      font-family:"Playfair Display", serif;
-      font-size: 16.5px;
-      color: var(--ink);
+      margin-top: 35px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 16px;
+      color: var(--soft);
     }
 
     .firma .nombre{
-      margin-top: 8px;
-      font-weight: 800;
-      color: #2b0c3b;
-      letter-spacing: 0.5px;
-      font-size: 16.8px;
+      margin-top: 10px;
+      font-weight: 700;
+      color: #f5d6ff;
+      letter-spacing: 0.6px;
+      text-shadow: 0 0 14px rgba(168,85,247,0.22);
     }
 
-    .firma .corazon{
-      font-size: 18px;
-    }
-
-    /* Frase final neon morado */
+    /* Caja final neon */
     .neon-box{
-      margin-top: 40px;
-      padding: 22px 18px;
-      border-radius: 20px;
-      background: rgba(15, 0, 25, 0.85);
+      margin-top: 45px;
+      padding: 26px 22px;
+      border-radius: 22px;
+      background: rgba(10, 0, 18, 0.85);
       border: 1px solid rgba(168,85,247,0.55);
       box-shadow:
         0 0 18px rgba(168,85,247,0.40),
-        0 0 45px rgba(124,58,237,0.35),
-        inset 0 0 22px rgba(255,79,216,0.10);
+        0 0 50px rgba(124,58,237,0.35),
+        inset 0 0 30px rgba(255,79,216,0.10);
       position:relative;
       overflow:hidden;
     }
@@ -223,97 +232,76 @@
     .neon-box::before{
       content:"";
       position:absolute;
-      inset:-40px;
-      background: radial-gradient(circle at 30% 30%, rgba(168,85,247,0.35), transparent 55%),
-                  radial-gradient(circle at 70% 70%, rgba(255,79,216,0.20), transparent 55%);
-      filter: blur(10px);
-      opacity:0.8;
+      inset:-60px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(168,85,247,0.40), transparent 55%),
+        radial-gradient(circle at 70% 70%, rgba(255,79,216,0.22), transparent 55%);
+      filter: blur(20px);
+      opacity:0.9;
     }
 
-    .neon-phrase{
+    .neon-text{
       position:relative;
       z-index:2;
       font-family:"Playfair Display", serif;
       font-size: 17px;
-      line-height: 1.9;
+      line-height: 2;
       text-align:center;
-      color: #f3e8ff;
+      color: #f6e9ff;
       text-shadow:
         0 0 10px rgba(168,85,247,0.75),
-        0 0 18px rgba(124,58,237,0.65),
-        0 0 35px rgba(255,79,216,0.35);
+        0 0 22px rgba(124,58,237,0.65),
+        0 0 40px rgba(255,79,216,0.30);
     }
 
-    .neon-phrase span{
+    .neon-text .name{
       display:block;
-      margin-top: 10px;
-      font-family:"Great Vibes", cursive;
-      font-size: 42px;
-      color: #d8b4fe;
-      text-shadow:
-        0 0 12px rgba(168,85,247,0.9),
-        0 0 30px rgba(124,58,237,0.8),
-        0 0 55px rgba(255,79,216,0.4);
+      margin-top: 14px;
+      font-family:"Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 800;
       letter-spacing: 1px;
-    }
-
-    /* Decoraciones esquina */
-    .corner{
-      position:absolute;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      filter: blur(0.5px);
-      opacity:0.25;
-      z-index:1;
-    }
-
-    .c1{
-      top:-40px;
-      left:-40px;
-      background: radial-gradient(circle, rgba(168,85,247,0.9), transparent 65%);
-    }
-
-    .c2{
-      bottom:-40px;
-      right:-40px;
-      background: radial-gradient(circle, rgba(255,79,216,0.7), transparent 65%);
+      color: #d8b4fe;
+      text-transform: uppercase;
+      text-shadow:
+        0 0 12px rgba(168,85,247,0.95),
+        0 0 28px rgba(124,58,237,0.85),
+        0 0 55px rgba(255,79,216,0.40);
     }
 
     /* Responsive */
-    @media(max-width: 600px){
+    @media(max-width: 650px){
       .letter{
-        padding: 32px 20px;
+        padding: 34px 22px;
       }
-      .title{
-        font-size: 44px;
+      .header h1{
+        font-size: 28px;
       }
       .content{
         font-size: 15.8px;
       }
-      .neon-phrase span{
-        font-size: 38px;
+      .neon-text{
+        font-size: 16px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="stars"></div>
+  <div class="particles"></div>
 
   <div class="container">
-    <div class="frame">
-      <div class="corner c1"></div>
-      <div class="corner c2"></div>
-
+    <div class="outer-frame">
       <div class="letter">
+
         <div class="header">
-          <div class="title">Carta de Amor para ti mi niña linda</div>
+          <h1>Carta de Amor para ti mi niña linda</h1>
           <div class="date">Miércoles, 1 de abril de 2026 — Noche</div>
           <div class="divider"></div>
         </div>
 
         <div class="content">
+
           <div class="saludo">Mi amor,</div>
 
           <p>
@@ -644,19 +632,19 @@
 
           <div class="firma">
             <div>Con todo lo que soy,</div>
-            <div><strong>tu novio que te ama más de lo que sabe explicar.</strong> <span class="corazon">❤️</span></div>
+            <div><strong>tu novio que te ama más de lo que sabe explicar.</strong> ❤️</div>
             <div class="nombre">JUAN KALETH MENDOZA PRIMERA 💜</div>
           </div>
 
-          <!-- FRASE FINAL NEON -->
+          <!-- FRASE FINAL NEON MORADO -->
           <div class="neon-box">
-            <div class="neon-phrase">
+            <div class="neon-text">
               Y si algún día el mundo se pone frío, si el tiempo intenta apagarnos o la vida quiere ponernos pruebas,
               quiero que recuerdes esto: mi amor por ti no se desgasta, no se rompe, no se cansa…
               porque yo no te amo por momentos, yo te amo por destino, por elección y por alma,
               y mientras mi corazón siga latiendo, siempre vas a ser mi razón más bonita, mi paz más profunda
               y mi sueño más real…
-              <span>VALERIA PETRO VILLAZÓN</span>
+              <span class="name">VALERIA PETRO VILLAZÓN</span>
             </div>
           </div>
 
